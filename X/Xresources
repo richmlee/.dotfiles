@@ -15,6 +15,9 @@ urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0000/bbbb
 urxvt*scrollBar: false
 
+urxvt*transparent: true
+!urxvtinheritPixmap: true
+urxvt.shading: 50
 !spotify shit
 spotify*background: #ffffff
 spotify*foreground: #000000
