@@ -111,15 +111,11 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
 
 ### Functions
-#function prompt_command {
-    #PS1="\W\$(__git_ps1) \$ "
-    #PS1='[\u@\h \W\$(__git_ps1)]\$ '
-    #PS1='\[\e[0;32m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\]: \[\e[1;34m\]\w\\$(__git_ps1)\[\e[m\] \[\e[0;32m\]\$\[\e[m\] \[\e[0;37m\]'
+function prompt_command {
     if [[ ${EUID} == 0 ]]; then 
-        PS1="\[\033[01;31m\]\u@\h\[\033[01;34m\] \w\n\[\033[01;34m\]\$\[\033[00m\] "
+        export PS1="\[\033[01;31m\]\u@\h\[\033[01;34m\] \w \n\[\033[01;34m\]\$\[\033[00m\] "
     else 
-        PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;31m\]$(__git_ps1)\n\[\033[01;34m\]\$\[\033[00m\] "
+        export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;31m\]$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\] "
     fi
-#}
-
-#export PROMPT_COMMAND=prompt_command
+}
+export PROMPT_COMMAND=prompt_command
