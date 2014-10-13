@@ -26,7 +26,7 @@ alias sudo='sudo '
 alias vi='vim'
 
 ### Exports
-#export CLICOLOR=TRUE
+export CLICOLOR=TRUE
 
 ## Colors
 # Reset
