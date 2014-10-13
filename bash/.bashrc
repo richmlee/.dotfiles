@@ -118,3 +118,4 @@ function prompt_command {
     fi
 }
 export PROMPT_COMMAND=prompt_command
+
