@@ -2,7 +2,33 @@
 # ~/.bashrc
 #
 
-### Colors
+## If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+### OS-Specific Stuff
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    alias ls='ls --color=auto'
+    # Enable git prompt
+    source /usr/share/git/completion/git-prompt.sh
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # Ensure user-installed binaries take precedence
+    PATH="/usr/local/bin:${PATH}"
+    # Homebrew
+    export HOMEBREW_GITHUB_API_TOKEN=30c26d998223220dbb98a7efefd1850e3ae497f2
+    # Enable bash-completion (needed for git prompt)
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        . $(brew --prefix)/etc/bash_completion
+    fi
+fi
+
+### Aliases
+alias sudo='sudo '
+alias vi='vim'
+
+### Exports
+export CLICOLOR=TRUE
+
+## Colors
 # Reset
 Color_Off='\e[0m'       # Text Reset
 
@@ -76,33 +102,6 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-### OS-Specific Stuff
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    alias ls='ls --color=auto'
-    # Enable git prompt
-    source /usr/share/git/completion/git-prompt.sh
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    # Ensure user-installed binaries take precedence
-    PATH="/usr/local/bin:${PATH}"
-    # Homebrew
-    export HOMEBREW_GITHUB_API_TOKEN=30c26d998223220dbb98a7efefd1850e3ae497f2
-    # Enable bash-completion (needed for git prompt)
-    if [ -f $(brew --prefix)/etc/bash_completion ]; then
-        . $(brew --prefix)/etc/bash_completion
-    fi
-fi
-
-### Aliases
-alias sudo='sudo '
-alias vi='vim'
-
-### Exports
-export CLICOLOR=TRUE
-
 # Git
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -113,9 +112,11 @@ export GIT_PS1_SHOWUPSTREAM=auto
 ### Functions
 function prompt_command {
     if [[ ${EUID} == 0 ]]; then 
-        export PS1="\[\033[01;31m\]\u@\h\[\033[01;34m\] \w \n\[\033[01;34m\]\$\[\033[00m\] "
+        #export PS1="\[\033[01;31m\]\u@\h\[\033[01;34m\] \w \n\[\033[01;34m\]\$\[\033[00m\] "
+        export PS1="$BRed\u@\h$BBlue \w \n$BRed\$$Color_Off "
     else 
-        export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;31m\]$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\] "
+        #export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;31m\]$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\] "
+        export PS1="$BGreen\u@\h$BBlue \w$BRed$(__git_ps1) \n$BBlue\$$Color_Off "
     fi
 }
 export PROMPT_COMMAND=prompt_command
