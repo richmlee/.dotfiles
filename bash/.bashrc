@@ -113,7 +113,7 @@ export GIT_PS1_SHOWUPSTREAM=auto
 function prompt_command {
     if [[ ${EUID} == 0 ]]; then 
         #export PS1="\[\033[01;31m\]\u@\h\[\033[01;34m\] \w \n\[\033[01;34m\]\$\[\033[00m\] "
-        export PS1="$BRed\u@\h$BBlue \w \n$BRed\$$Color_Off "
+        export PS1="$BRed\u@\h$BBlue \w \n$BBlue\$$Color_Off "
     else 
         #export PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;31m\]$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\] "
         export PS1="$BGreen\u@\h$BBlue \w$BRed$(__git_ps1) \n$BBlue\$$Color_Off "
