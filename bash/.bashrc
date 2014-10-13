@@ -5,14 +5,17 @@
 ## If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-### OS-Specific Stuff
+## OS-Specific Stuff
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    alias ls='ls --color=auto'
-    # Enable git prompt
+   # Enable git prompt
     source /usr/share/git/completion/git-prompt.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Ensure user-installed binaries take precedence
     PATH="/usr/local/bin:${PATH}"
+    # Let coreutils take precedence over default OSX utils
+    PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    # Let man pages for coreutils take precedence over default OSX man pages
+    MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
     # Homebrew
     export HOMEBREW_GITHUB_API_TOKEN=30c26d998223220dbb98a7efefd1850e3ae497f2
     # Enable bash-completion (needed for git prompt)
@@ -21,17 +24,19 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     fi
 fi
 
-### Aliases
+## Aliases
 alias sudo='sudo '
 alias vi='vim'
-
-### Exports
+alias ls='ls --color=auto'
+ 
+## Exports
 export CLICOLOR=TRUE
+export VISUAL=vim
+export EDITOR=$VISUAL
 
 ## Colors
 # Reset
 Color_Off='\e[0m'       # Text Reset
-
 # Regular Colors
 Black='\e[0;30m'        # Black
 Red='\e[0;31m'          # Red
@@ -41,7 +46,6 @@ Blue='\e[0;34m'         # Blue
 Purple='\e[0;35m'       # Purple
 Cyan='\e[0;36m'         # Cyan
 White='\e[0;37m'        # White
-
 # Bold
 BBlack='\e[1;30m'       # Black
 BRed='\e[1;31m'         # Red
@@ -51,7 +55,6 @@ BBlue='\e[1;34m'        # Blue
 BPurple='\e[1;35m'      # Purple
 BCyan='\e[1;36m'        # Cyan
 BWhite='\e[1;37m'       # White
-
 # Underline
 UBlack='\e[4;30m'       # Black
 URed='\e[4;31m'         # Red
@@ -61,7 +64,6 @@ UBlue='\e[4;34m'        # Blue
 UPurple='\e[4;35m'      # Purple
 UCyan='\e[4;36m'        # Cyan
 UWhite='\e[4;37m'       # White
-
 # Background
 On_Black='\e[40m'       # Black
 On_Red='\e[41m'         # Red
@@ -71,7 +73,6 @@ On_Blue='\e[44m'        # Blue
 On_Purple='\e[45m'      # Purple
 On_Cyan='\e[46m'        # Cyan
 On_White='\e[47m'       # White
-
 # High Intensity
 IBlack='\e[0;90m'       # Black
 IRed='\e[0;91m'         # Red
@@ -81,7 +82,6 @@ IBlue='\e[0;94m'        # Blue
 IPurple='\e[0;95m'      # Purple
 ICyan='\e[0;96m'        # Cyan
 IWhite='\e[0;97m'       # White
-
 # Bold High Intensity
 BIBlack='\e[1;90m'      # Black
 BIRed='\e[1;91m'        # Red
@@ -91,7 +91,6 @@ BIBlue='\e[1;94m'       # Blue
 BIPurple='\e[1;95m'     # Purple
 BICyan='\e[1;96m'       # Cyan
 BIWhite='\e[1;97m'      # White
-
 # High Intensity backgrounds
 On_IBlack='\e[0;100m'   # Black
 On_IRed='\e[0;101m'     # Red
@@ -102,14 +101,14 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-# Git
+## Git
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
 
-### Functions
+## Prompt
 function prompt_command {
     if [[ ${EUID} == 0 ]]; then 
         export PS1="$BRed\u@\h$BBlue \w$Color_Off\n$BBlue\$$Color_Off "
