@@ -116,5 +116,5 @@ function prompt_command {
         export PS1="\[$BGreen\]\u@\h\[$BBlue\] \w\[$BRed\]$(__git_ps1)\[$Color_Off\]\n\[$BBlue\]\$\[$Color_Off\] "
     fi
 }
-export PROMPT_COMMAND=prompt_command
+export PROMPT_COMMAND=prompt_command;export PS1
 
