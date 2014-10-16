@@ -6,18 +6,20 @@ xft.hintstyle:	hintfull
 !xft.dpi:	270
 
 !urxvt shit
-!urxvt*font:	xft.DejaVuSan:size=11
-urxvt*font: xft:Inconsolata:style=Semibold:pixelsize=24:antialias=true:hinting=slight
+urxvt*font:	xft:DejaVuSansMono:pixelsize=16:antialias=true:hinting=slight
+!urxvt*font: xft:DroidSansMono:pixelSize=16:antialias=true:hinting=slight
+!urxvt*font: xft:Inconsolata:style=Semibold:pixelsize=14:antialias=true:hinting=slight
 !urxvt*boldFont: xft:Inconsolata:style=bold:pixelsize=16:antialias=true:hinting=slight
 !urxvt.font:xft:source code pro:medium:size=11
 !urxvt.boldFont:xft:source code pro:medium:size=11
 urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0000/bbbb
 urxvt*scrollBar: false
+urxvt*saveLines: 65535
 
 urxvt*transparent: true
 !urxvtinheritPixmap: true
-urxvt.shading: 50
+urxvt.shading: 25
 !spotify shit
 spotify*background: #ffffff
 spotify*foreground: #000000
