@@ -18,8 +18,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
     # Let man pages for coreutils take precedence over default OSX man pages
     MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-    # Homebrew
-    export HOMEBREW_GITHUB_API_TOKEN=30c26d998223220dbb98a7efefd1850e3ae497f2
+    source .homebrew_github_api_token
     # Enable bash-completion (needed for git prompt)
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
