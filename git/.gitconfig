@@ -1,0 +1,7 @@
+[user]
+	name = Rich Lee
+	email = rich@richmlee.com
+[push]
+	default = simple
+[color]
+	ui = auto
