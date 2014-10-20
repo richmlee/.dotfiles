@@ -110,12 +110,13 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
 
 ## Prompt
-function prompt_command {
+#function prompt_command {
     if [[ ${EUID} == 0 ]]; then 
         export PS1="$BRed\u@\h$BBlue \w$Color_Off\n$BBlue\$$Color_Off "
     else 
-        export PS1="$BGreen\u@\h$BBlue \w$BRed$(__git_ps1)$Color_Off\n$BBlue\$$Color_Off "
+        export PS1="$BGreen\u@\h$BBlue \w$BRed\$(__git_ps1)$Color_Off\n$BBlue\$$Color_Off " 
     fi
-}
-export PROMPT_COMMAND=prompt_command;export PS1
+#}
+#export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$"'
+#export PROMPT_COMMAND=prompt_command;export PS1
 
