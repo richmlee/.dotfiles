@@ -18,6 +18,9 @@ urxvt*scrollBar: false
 urxvt*saveLines: 65535
 
 urxvt*transparent: true
+
+urxvt*cursorBlink: true
+
 !urxvtinheritPixmap: true
 urxvt.shading: 25
 !spotify shit
