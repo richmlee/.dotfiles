@@ -36,6 +36,9 @@ export CLICOLOR=TRUE
 export VISUAL=vim
 export EDITOR=$VISUAL
 
+## vim bindings
+set -o vi
+
 ## Colors
 # Reset
 Color_Off='\[\e[0m\]'       # Text Reset
