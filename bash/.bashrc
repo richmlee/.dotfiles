@@ -36,8 +36,8 @@ export CLICOLOR=TRUE
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-## vim bindings
-set -o vi
+## Miscellaneous
+set -o vi                   # vim bindings
 
 ## Colors
 # Reset
