@@ -14,7 +14,7 @@ urxvt*font: xft:Inconsolata:pixelsize=16:antialias=true:hingting=slight
 !urxvt.font:xft:source code pro:medium:size=11
 !urxvt.boldFont:xft:source code pro:medium:size=11
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0000/bbbb
+urxvt*background: rgba:0000/0000/0000/cccc
 urxvt*scrollBar: false
 urxvt*saveLines: 65535
 
@@ -23,7 +23,7 @@ urxvt*transparent: true
 urxvt*cursorBlink: true
 
 !urxvtinheritPixmap: true
-urxvt.shading: 25
+urxvt.shading: 20
 !spotify shit
 spotify*background: #ffffff
 spotify*foreground: #000000

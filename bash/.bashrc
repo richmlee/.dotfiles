@@ -36,6 +36,9 @@ export CLICOLOR=TRUE
 export VISUAL=vim
 export EDITOR=$VISUAL
 
+# Use screen-256color when TMUX is running...
+[ -n "$TMUX" ] && export TERM=screen-256color
+
 ## Miscellaneous
 set -o vi                   # vim bindings
 
