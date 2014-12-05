@@ -8,7 +8,12 @@
 ## OS-Specific Stuff
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Enable git prompt
-    source /usr/share/git/completion/git-prompt.sh
+    if [[ -e /usr/share/git/completion/git-prompt.sh ]]; then
+      source /usr/share/git/completion/git-prompt.sh
+    fi
+    if [[ -e /usr/lib/git-core/git-sh-prompt ]]; then
+      source /usr/lib/git-core/git-sh-prompt
+    fi
     # Ruby paths
     PATH="`ruby -e 'print Gem.user_dir'`/bin:$PATH"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
