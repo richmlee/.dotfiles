@@ -9,4 +9,4 @@
 	helper = cache --timeout 3600
 [core]
 	excludesfile = /Users/rich/.gitignore
-    excludesfile = /home/rich/.gitignore
+  excludesfile = /home/rich/.gitignore
