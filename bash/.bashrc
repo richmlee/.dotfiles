@@ -125,6 +125,6 @@ export GIT_PS1_SHOWUPSTREAM=auto
 if [[ ${EUID} == 0 ]]; then 
   export PS1="${BBlue}[\t] {BRed}[\u@\h]${BBlue} "
 else 
-  export PS1="${BBlue}[\t] ${BGreen}[\u@\h$]{BBlue} " 
+  export PS1="${BBlue}[\t] ${BGreen}[\u@\h]${BBlue} " 
 fi
-export PS1="${PS1}[\w$]{BRed}\$(__git_ps1)${Color_Off}\n${BBlue}\$${Color_Off} "
+export PS1="${PS1}[\w]${BRed}\$(__git_ps1)${Color_Off}\n${BBlue}\$${Color_Off} "
