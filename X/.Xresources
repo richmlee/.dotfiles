@@ -1,5 +1,5 @@
 !xft shit
-#xft.dpi: 180
+!xft.dpi: 180
 xft.autohint: 0
 xft.lcdfilter: lcddefault
 xft.hintstyle: hintfull
@@ -10,7 +10,7 @@ xft.rgba: rgb
 !xft.hinting:	true
 !xft.rgba:	rgb
 !xft.hintstyle:	hintfull
-!xft.dpi:	270
+xft.dpi:	180
 
 !urxvt shit
 !urxvt*font:	xft:DejaVuSansMono:pixelsize=16:antialias=true:hinting=slight
