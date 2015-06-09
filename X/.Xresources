@@ -10,7 +10,7 @@ xft.rgba: rgb
 !xft.hinting:	true
 !xft.rgba:	rgb
 !xft.hintstyle:	hintfull
-xft.dpi: 90
+xft.dpi: 96
 
 !urxvt shit
 !urxvt*font:	xft:DejaVuSansMono:pixelsize=16:antialias=true:hinting=slight
