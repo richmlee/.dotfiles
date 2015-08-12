@@ -1,7 +1,7 @@
 #exec openbox-session
 xrdb -merge ~/.Xresources &
 xrandr --dpi 96 &
-xset r rate 150 15
+xset r rate 200 30
 #xsetroot -solid '#000000' &
 #xsetroot -solid '#ffffff' &
 #hsetroot -solid '#000000' &
