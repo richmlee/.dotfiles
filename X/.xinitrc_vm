@@ -1,4 +1,4 @@
-/usr/bin/VBoxClient-all &
-xrdb -merge ~/.Xresources &
-xrandr --dpi 96 &
+/usr/bin/VBoxClient-all
+xrandr --dpi 96
+xrdb -merge ~/.Xresources
 exec i3
