@@ -9,7 +9,7 @@ xft.dpi: 192
 
 !urxvt shit
 !urxvt*font: xft:Inconsolata:pixelsize=16:antialias=true:hinting=slight
-urxvt*font: xft:Source Code Pro:pixelsize=16:antialias=true:hinting=slight
+urxvt*font: xft:Source Code Pro:pixelsize=14:antialias=true:hinting=slight
 urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0000/cccc
 urxvt*scrollBar: false

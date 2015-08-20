@@ -15,7 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Source Code Pro 12
+font pango:Source Code Pro 10
 #font pango:DejaVu Sans Mono 12
 #font pango:Inconsolata 12
 #font pango:Android Sans Mono 12
@@ -41,7 +41,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec dmenu_run -fn 'DejaVu Sans Mono-12' -h 24 # -h param only works with dmenu-xft-height and -fn needs dmenu-xft
 #bindsym $mod+d exec dmenu_run -fn 'Inconsolata-12' -h 24 # -h param only works with dmenu-xft-height and -fn needs dmenu-xft
 #bindsym $mod+d exec dmenu_run -fn 'Inconsolata-14'
-bindsym $mod+d exec dmenu_run -fn 'Source Code Pro-14'
+bindsym $mod+d exec dmenu_run -fn 'Source Code Pro-12'
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
