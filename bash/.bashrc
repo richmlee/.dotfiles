@@ -9,10 +9,10 @@
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Enable git prompt
     if [[ -e /usr/share/git/completion/git-prompt.sh ]]; then
-      source /usr/share/git/completion/git-prompt.sh
+        source /usr/share/git/completion/git-prompt.sh
     fi
     if [[ -e /usr/lib/git-core/git-sh-prompt ]]; then
-      source /usr/lib/git-core/git-sh-prompt
+        source /usr/lib/git-core/git-sh-prompt
     fi
     # Ruby paths
     PATH="`ruby -e 'print Gem.user_dir'`/bin:$PATH"
@@ -27,6 +27,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Enable bash-completion (needed for git prompt)
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
+    fi
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+    if [[ -e /etc/bash_completion.d/git ]]; then
+        source /etc/bash_completion.d/git
     fi
 fi
 
@@ -123,8 +127,12 @@ export GIT_PS1_SHOWUPSTREAM=auto
 
 ## Prompt
 if [[ ${EUID} == 0 ]]; then 
-  export PS1="${BRed}"
+    export PS1="${BRed}"
 else 
-  export PS1="${BGreen}" 
+    export PS1="${BGreen}" 
 fi
-export PS1="${BPurple}[\t] ${PS1}[\u@\h] ${BYellow}[\w]${BRed}\$(__git_ps1)${Color_Off}\n${BBlue}\$${Color_Off} "
+if type __git_ps1 > /dev/null 2>&1; then
+    export PS1="${BPurple}[\t] ${PS1}[\u@\h] ${BYellow}[\w]${BRed}\$(__git_ps1)${Color_Off}\n${BBlue}\$${Color_Off} "
+else
+    export PS1="${BPurple}[\t] ${PS1}[\u@\h] ${BYellow}[\w]${Color_Off}\n${BBlue}\$${Color_Off} "
+fi
