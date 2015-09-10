@@ -1,12 +1,13 @@
 [user]
-	name = Rich Lee
-	email = rich@richmlee.com
+    name = Rich Lee
+    email = rich@richmlee.com
 [push]
-	default = simple
+    default = simple
 [color]
-	ui = auto
+    ui = auto
 [credential]
-	helper = cache --timeout 3600
+    helper = cache --timeout 3600
 [core]
-	excludesfile = /Users/rich/.gitignore
-  excludesfile = /home/rich/.gitignore
+    excludesfile = /Users/rich/.gitignore
+    excludesfile = /home/rich/.gitignore
+    autocrlf = true
