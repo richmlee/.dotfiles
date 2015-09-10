@@ -10,3 +10,4 @@
 [core]
     excludesfile = /Users/rich/.gitignore
     excludesfile = /home/rich/.gitignore
+    autocrlf = true
