@@ -52,7 +52,7 @@ export EDITOR=$VISUAL
 [ -n "$TMUX" ] && export TERM=screen-256color
 
 ## Miscellaneous
-set -o vi                   # vim bindings
+#set -o vi                   # vim bindings
 
 ## Colors
 # Reset
