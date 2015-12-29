@@ -18,7 +18,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     PATH="`ruby -e 'print Gem.user_dir'`/bin:$PATH"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Ensure user-installed binaries take precedence
-    PATH="/usr/local/bin:${PATH}"
+    PATH="/usr/local/bin:$PATH"
     # Let coreutils take precedence over default OSX utils
     PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
     # Let man pages for coreutils take precedence over default OSX man pages
