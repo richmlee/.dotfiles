@@ -6,7 +6,7 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
-set colorcolumn=80
+set colorcolumn=120
 
 set number
 
