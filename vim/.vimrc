@@ -1,6 +1,18 @@
 " Use Vim settings rather than Vi settings
 " This must be first, because it changes other options as a side effect
 set nocompatible
+filetype off
+
+" Vundle plugins
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim' " required by Vundle
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
