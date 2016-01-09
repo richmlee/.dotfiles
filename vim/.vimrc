@@ -4,6 +4,12 @@ set nocompatible
 filetype off
 
 " Vundle plugins
+
+" Install Vundle if it's not already installed
+if !isdirectory(expand("~/.vim/bundle/Vundle.vim"))
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+endif
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
