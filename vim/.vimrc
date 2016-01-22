@@ -50,8 +50,20 @@ set colorcolumn=120
 " Display line numbers
 set number
 
-" XML Formatting
+" XML formatting
 map <Leader>xml :set filetype=xml<CR>:syntax enable<CR>:%!tidy -mi -xml -q -utf8 -w 1000<CR>1G=G
 
-" JSON Formatting
+" JSON formatting
 map <Leader>json :set filetype=json<CR>:syntax enable<CR>:%!python -m json.tool<CR>
+
+" Remap some keys
+" Disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
