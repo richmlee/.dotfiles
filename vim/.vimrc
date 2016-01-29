@@ -39,6 +39,9 @@ set autoindent
 set cindent
 set smartindent
 
+" Indentations by file type
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+
 " Tabbing and spaces
 set tabstop=4
 set shiftwidth=4
