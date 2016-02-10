@@ -10,3 +10,12 @@
 [core]
     excludesfile = /Users/rich/.gitignore
     excludesfile = /home/rich/.gitignore
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
