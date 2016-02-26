@@ -38,7 +38,7 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
 fi
 
 ## Start up tmux (if it exists) and on valid terminals (i.e. not framebuffer)
-if [[ "$TERM" != "linux" ]] && [[ "LOGNAME" == "rich" ]]; then
+if [[ "$TERM" != "linux" ]] && [[ "$USER" == "rich" ]]; then
     if which tmux >/dev/null 2>&1; then
         # if no session is started, start a new session
         test -z ${TMUX} && tmux
