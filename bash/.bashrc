@@ -37,10 +37,12 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
     fi
 fi
 
-## Start up tmux (if it exists)
-if which tmux >/dev/null 2>&1; then
-    # if no session is started, start a new session
-    test -z ${TMUX} && tmux
+## Start up tmux (if it exists) and on valid terminals (i.e. not framebuffer)
+if [[ "$TERM" != "linux" ]]; then
+    if which tmux >/dev/null 2>&1; then
+        # if no session is started, start a new session
+        test -z ${TMUX} && tmux
+    fi
 fi
 
 ## Aliases
