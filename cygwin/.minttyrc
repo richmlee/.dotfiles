@@ -1,0 +1,10 @@
+BoldAsFont=no
+Transparency=medium
+Font=Source Code Pro
+CursorType=block
+Columns=96
+Rows=48
+Term=xterm-256color
+BoldAsColour=yes
+Blue=0,191,255
+BoldBlue=24,116,205
