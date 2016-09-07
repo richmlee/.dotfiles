@@ -8,3 +8,4 @@ Term=xterm-256color
 BoldAsColour=yes
 Blue=0,191,255
 BoldBlue=24,116,205
+FontHeight=12
