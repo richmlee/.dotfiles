@@ -3,23 +3,6 @@
 set nocompatible
 filetype off
 
-" Vundle plugins
-
-" Install Vundle if it's not already installed
-if !isdirectory(expand("~/.vim/bundle/Vundle.vim"))
-    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-endif
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim' " required by Vundle
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-
-call vundle#end()
-
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 

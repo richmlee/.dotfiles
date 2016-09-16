@@ -32,8 +32,8 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
     if [[ -e /etc/bash/bash_completion.d/git ]]; then
         source /etc/bash_completion.d/git
     fi
-    if [[ -e /cygdrive/c/Program\ Files\ \(x86\)/Git/etc/git-prompt.sh ]]; then
-        source /cygdrive/c/Program\ Files\ \(x86\)/Git/etc/git-prompt.sh
+    if [[ -e /cygdrive/c/Program\ Files/Git/etc/profile.d/git-prompt.sh ]]; then
+        source /cygdrive/c/Program\ Files/Git/etc/profile.d/git-prompt.sh
     fi
 fi
 
