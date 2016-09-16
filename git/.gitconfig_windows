@@ -1,0 +1,22 @@
+[user]
+    name = Rich Lee
+    email = rich@richmlee.com
+[push]
+    default = simple
+[color]
+    ui = auto
+[credential]
+    helper = wincred
+[core]
+    excludesfile = /Users/rich/.gitignore
+    excludesfile = /home/rich/.gitignore
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+    keepBackup = false
