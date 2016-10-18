@@ -3,6 +3,9 @@
 set nocompatible
 filetype off
 
+" Color Scheme
+colorscheme peachpuff 
+
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
