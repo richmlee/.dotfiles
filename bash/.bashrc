@@ -14,8 +14,6 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     if [[ -e /usr/lib/git-core/git-sh-prompt ]]; then
         source /usr/lib/git-core/git-sh-prompt
     fi
-    # Ruby paths
-    PATH="`ruby -e 'print Gem.user_dir'`/bin:$PATH"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Ensure user-installed binaries take precedence
     PATH="/usr/local/bin:$PATH"
@@ -43,6 +41,11 @@ if [[ "$TERM" != "linux" ]] && [[ "$USER" == "rich" ]]; then
         # if no session is started, start a new session
         test -z ${TMUX} && tmux
     fi
+fi
+
+## Add local user gem path for Ruby (goes with --user-install option in .gemrc)
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
 ## Aliases
