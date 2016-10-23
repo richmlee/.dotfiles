@@ -33,6 +33,7 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
     if [[ -e /cygdrive/c/Program\ Files/Git/etc/profile.d/git-prompt.sh ]]; then
         source /cygdrive/c/Program\ Files/Git/etc/profile.d/git-prompt.sh
     fi
+    export COMSPEC=/cygdrive/c/Windows/System32/cmd.exe
 fi
 
 ## Start up tmux (if it exists) and on valid terminals (i.e. not framebuffer)
