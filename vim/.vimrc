@@ -1,7 +1,6 @@
 " Use Vim settings rather than Vi settings
 " This must be first, because it changes other options as a side effect
 set nocompatible
-filetype off
 
 " Color Scheme
 colorscheme peachpuff 
@@ -25,19 +24,20 @@ set autoindent
 set cindent
 set smartindent
 
-" Indentations by file type
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
-
-" Tabbing and spaces
-set tabstop=4
-set shiftwidth=4
+" Default tabbing and spaces
+set tabstop=2
+set shiftwidth=2
 set expandtab
+
+" Indentations by file type
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " Display color bar at a specific column
 set colorcolumn=120
 
 " Display line numbers
 set number
+set relativenumber
 
 " XML formatting
 map <Leader>xml :set filetype=xml<CR>:syntax enable<CR>:%!tidy -mi -xml -q -utf8 -w 1000<CR>1G=G
