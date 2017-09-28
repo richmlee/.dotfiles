@@ -26,6 +26,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
     fi
+    # Use Java 8 as default
+    #export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
 elif [[ "$OSTYPE" == "cygwin" ]]; then
     if [[ -e /etc/bash/bash_completion.d/git ]]; then
         source /etc/bash_completion.d/git
