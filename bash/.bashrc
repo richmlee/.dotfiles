@@ -47,9 +47,9 @@ if [[ "$TERM" != "linux" ]] && [[ "$USER" == "rich" ]]; then
 fi
 
 ## Add local user gem path for Ruby (goes with --user-install option in .gemrc)
-if which ruby >/dev/null && which gem >/dev/null; then
-    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-fi
+#if which ruby >/dev/null && which gem >/dev/null; then
+#    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+#fi
 
 ## Aliases
 alias sudo='sudo '
