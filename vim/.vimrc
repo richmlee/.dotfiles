@@ -33,7 +33,7 @@ set expandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " Display color bar at a specific column
-set colorcolumn=80
+"set colorcolumn=80
 
 " Display line numbers
 set number
