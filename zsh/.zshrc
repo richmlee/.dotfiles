@@ -1,3 +1,4 @@
+#
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -62,7 +63,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(aws docker gem git gradle mvn node npm osx python ruby scala tmux tmuxinator vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,11 +75,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#if [[ -n $SSH_CONNECTION ]]; then
+#  export EDITOR='vim'
+#else
+#  export EDITOR='mvim'
+#fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -94,4 +95,31 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Custom configurations
+export EDITOR="vim"
+
+# Ensure user-installed binaries take precedence
+export PATH="/usr/local/bin:$PATH"
+# Let coreutils take precedence over default OSX utils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# Let man pages for coreutils take precedence over default OSX man pages
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# Ruby stuff
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
+## Add local user gem path for Ruby (goes with --user-install option in .gemrc)
+#if which ruby >/dev/null && which gem >/dev/null; then
+#  export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+#fi
+
+## Aliases
+alias sudo='sudo '
+alias vi='vim'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# Start tmux
+if [ "$TMUX" = "" ]; then tmux; fi
 
