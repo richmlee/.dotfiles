@@ -121,5 +121,5 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # Start tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then exec tmux; fi
 
