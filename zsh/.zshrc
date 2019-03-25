@@ -120,6 +120,9 @@ alias vi='vim'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+# Don't share terminal history across tmux panes
+unsetopt share_history
+
 # Get rid of trailing inverse % with default theme
 setopt PROMPT_CR PROMPT_SP; PROMPT_EOL_MARK=""
 
