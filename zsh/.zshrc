@@ -1,4 +1,3 @@
-#
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -63,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws docker gem git gradle mvn node npm osx python ruby scala tmuxinator vi-mode)
+plugins=(aws docker gem git gradle mvn node npm osx python ruby scala tmux tmuxinator vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,7 +124,4 @@ unsetopt share_history
 
 # Get rid of trailing inverse % with default theme
 setopt PROMPT_CR PROMPT_SP; PROMPT_EOL_MARK=""
-
-# Start tmux
-if [ "$TMUX" = "" ]; then exec tmux; fi
 
