@@ -108,10 +108,6 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # Ruby stuff
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
-## Add local user gem path for Ruby (goes with --user-install option in .gemrc)
-#if which ruby >/dev/null && which gem >/dev/null; then
-#  export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
-#fi
 
 ## Aliases
 alias sudo='sudo '
