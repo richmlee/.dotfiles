@@ -3,7 +3,7 @@
 set nocompatible
 
 " Color Scheme
-colorscheme peachpuff 
+colorscheme evening 
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start

@@ -1,22 +1,23 @@
 [user]
-    name = Rich Lee
-    email = rich@richmlee.com
+  name = Rich Lee
+  email = rich@richmlee.com
 [push]
-    default = simple
+  default = simple
 [color]
-    ui = auto
+  ui = auto
 [credential]
-    helper = cache --timeout 3600
+  helper = cache --timeout 3600
 [core]
-    excludesfile = /Users/rich/.gitignore
-    excludesfile = /home/rich/.gitignore
-[diff]
-    tool = vimdiff
-[difftool]
-    prompt = false
+  excludesfile = /Users/rich/.gitignore
 [merge]
-    tool = vimdiff
-    conflictstyle = diff3
-[mergetool]
-    prompt = false
-    keepBackup = false
+  tool = intellij
+[mergetool "intellij"]
+  cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+  trustExitCode = true
+[diff]
+  tool = intellij
+  prompt = false
+[difftool "intellij"]
+  cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+  prompt = false
+

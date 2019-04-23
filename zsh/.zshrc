@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="rich"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws docker gem git gradle mvn node npm osx python ruby scala tmux tmuxinator vi-mode)
+plugins=(aws docker gem git gradle mvn node npm osx python ruby scala tmux tmuxinator vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,3 +121,8 @@ unsetopt share_history
 # Get rid of trailing inverse % with default theme
 setopt PROMPT_CR PROMPT_SP; PROMPT_EOL_MARK=""
 
+# npm packages
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+export PATH="$NPM_PACKAGES/bin:$PATH"
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"

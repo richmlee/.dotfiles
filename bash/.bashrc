@@ -21,13 +21,18 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
     # Let man pages for coreutils take precedence over default OSX man pages
     MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-    source ~/.homebrew_github_api_token
     # Enable bash-completion (needed for git prompt)
     if [ -f $(brew --prefix)/etc/bash_completion ]; then
         . $(brew --prefix)/etc/bash_completion
     fi
     # Use Java 8 as default
-    #export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
+    # export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
+    # Android development
+    export ANDROID_HOME=$HOME/Library/Android/sdk
+    export PATH=$PATH:$ANDROID_HOME/emulator
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/tools/bin
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
 elif [[ "$OSTYPE" == "cygwin" ]]; then
     if [[ -e /etc/bash/bash_completion.d/git ]]; then
         source /etc/bash_completion.d/git
