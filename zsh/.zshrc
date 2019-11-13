@@ -109,7 +109,7 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
 
-## Aliases
+# Aliases
 alias sudo='sudo '
 alias vi='vim'
 alias ls='ls --color=auto'
