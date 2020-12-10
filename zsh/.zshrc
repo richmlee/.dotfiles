@@ -100,6 +100,8 @@ export EDITOR="vim"
 
 # Ensure user-installed binaries take precedence
 export PATH="/usr/local/bin:$PATH"
+# Homebrew sbin
+export PATH="/usr/local/sbin:$PATH"
 # Let coreutils take precedence over default OSX utils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Let man pages for coreutils take precedence over default OSX man pages
