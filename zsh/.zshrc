@@ -107,6 +107,9 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Let man pages for coreutils take precedence over default OSX man pages
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+# Postgres without installing postgres
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
 # Ruby stuff
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
