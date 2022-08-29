@@ -1,26 +1,32 @@
 [user]
-  name = Rich Lee
-  email = rich@richmlee.com
+	name = Rich Lee
+	email = rich@richmlee.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [push]
-  default = simple
+	default = simple
+[pull]
+	rebase = false
 [color]
-  ui = auto
+	ui = auto
 [credential]
-  helper = cache --timeout 3600
+	helper = cache --timeout 3600
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager-core
 [core]
-  excludesfile = /Users/rich/.gitignore
+	excludesfile = /Users/rich/.gitignore
 [difftool]
-  prompt = false
+	prompt = false
 [diff]
-  tool = nvimdiff
+	tool = nvimdiff
 [difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [mergetool]
-  prompot = false
-  tool = nvimdiff
-  conflictstyle = diff3
+	prompot = false
+	tool = nvimdiff
+	conflictstyle = diff3
+
+# IntelliJ IDEA Diff and Merge
 #[merge]
 #  tool = intellij
 #[mergetool "intellij"]
@@ -32,7 +38,5 @@
 #[difftool "intellij"]
 #  cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
 #  prompt = false
-[pull]
-	rebase = false
 #[credential "https://dev.azure.com"]
-#	useHttpPath = true
+#	 useHttpPath = true
