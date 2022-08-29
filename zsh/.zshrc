@@ -62,7 +62,7 @@ ZSH_THEME="rich"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws docker gem git gradle mvn node npm osx python ruby scala tmux tmuxinator vagrant vi-mode)
+plugins=(aws docker fzf gem git gradle mvn node npm macos python ruby scala tmux tmuxinator vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -96,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Custom configurations
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Ensure user-installed binaries take precedence
 export PATH="/usr/local/bin:$PATH"
@@ -116,7 +116,7 @@ export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
 
 # Aliases
 alias sudo='sudo '
-alias vi='vim'
+alias vi='nvim'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
@@ -133,4 +133,7 @@ export PATH="$NPM_PACKAGES/bin:$PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # asdf
-. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
