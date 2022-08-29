@@ -158,3 +158,5 @@ if type __git_ps1 > /dev/null 2>&1; then
 else
     export PS1="${BPurple}[\t] ${PS1}[\u@\h] ${BYellow}[\w]${Color_Off}\n${BBlue}\$${Color_Off} "
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
