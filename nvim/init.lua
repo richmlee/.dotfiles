@@ -138,8 +138,8 @@ require('lspconfig')['solargraph'].setup{}
 require('lspconfig')['tsserver'].setup{}
 
 -- Settings
-opt.number = true       -- show line numbers
-opt.tabstop = 2       -- tab spaces
+opt.number = true       	-- show line numbers
+opt.tabstop = 2       		-- tab spaces
 opt.shiftwidth = 2        -- size of indent
 --opt.termguicolors=true
 
