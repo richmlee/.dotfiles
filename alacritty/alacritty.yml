@@ -10,8 +10,8 @@ shell:
 
 window:
   opacity: 0.8
-  decorations: none
-  startup_mode: SimpleFullscreen
+  decorations: full
+  startup_mode: Windowed
 
 # Base16 Tomorrow Night 256 - alacritty color config
 # Chris Kempson (http://chriskempson.com)
