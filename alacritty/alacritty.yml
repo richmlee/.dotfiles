@@ -2,7 +2,7 @@ env:
   TERM: screen-256color
 
 shell:
-  program: /usr/local/bin/zsh
+  program: zsh
   args:
   - -l
   - -c
@@ -12,6 +12,11 @@ window:
   opacity: 0.8
   decorations: full
   startup_mode: Windowed
+  # startup_mode: SimpleFullscreen
+  # startup_mode: Maximized
+
+# Send ESC (\x1b) before characters when alt is pressed.
+  alt_send_esc: true
 
 # Base16 Tomorrow Night 256 - alacritty color config
 # Chris Kempson (http://chriskempson.com)
