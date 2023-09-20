@@ -11,9 +11,9 @@ shell:
 window:
   opacity: 0.8
   decorations: full
-  startup_mode: Windowed
+  startup_mode: Maximized
+  start_maximized: true
   # startup_mode: SimpleFullscreen
-  # startup_mode: Maximized
 
 # Send ESC (\x1b) before characters when alt is pressed.
   alt_send_esc: true
