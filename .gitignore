@@ -1,2 +1,2 @@
-**/*.lock
+**/*-lock.json
 **/.DS_Store
