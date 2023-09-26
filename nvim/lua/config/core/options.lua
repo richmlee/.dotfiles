@@ -1,10 +1,11 @@
 -- Aliases
 local cmd = vim.cmd
 local opt = vim.opt
-
+local wo = vim.wo
 -- General
 -- opt.encoding = "utf-8"
-
+wo.number = true
+--
 -- Indentation
 local indent = 2
 
