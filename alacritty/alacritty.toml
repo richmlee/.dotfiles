@@ -6,10 +6,12 @@ program = "zsh"
 args = ["-l"]
 
 [window]
-decorations = "full"
+decorations = "None"
 opacity = 0.8
+blur = true
 #start_maximized = true
-startup_mode = "Maximized"
+#startup_mode = "Maximized"
+startup_mode = "SimpleFullscreen"
 
 [font]
 size = 14
