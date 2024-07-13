@@ -3,4 +3,7 @@
   email = rich@richmlee.com
 [color]
   ui = true
-
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
