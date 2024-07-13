@@ -1,5 +1,5 @@
 [env]
-term = "xterm-256color"
+term = "alacritty-direct"
 
 [shell]
 program = "zsh"
@@ -7,25 +7,35 @@ args = ["-l"]
 
 [window]
 decorations = "None"
-opacity = 0.8
+opacity = 0.75
 blur = true
-startup_mode = "SimpleFullscreen"
-dynamic_padding = true
+startup_mode = "Maximized"
 
 [font]
-size = 14
+size = 13
+
+[font.offset]
+x = 0 
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0
 
 [font.bold]
+family = "JetBrainsMonoNL Nerd Font Mono"
 style = "Bold"
 
 [font.bold_italic]
+family = "JetBrainsMonoNL Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
+family = "JetBrainsMonoNL Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "JetBrainsMonoNL Nerd Font Mono"
 style = "Regular"
 
 # Colors from iTerm2 Pastel Dark Background
