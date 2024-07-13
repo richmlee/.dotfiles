@@ -14,10 +14,12 @@ return {
       ensure_installed = {
         "lua_ls",
         "tsserver",
+        "eslint",
         "html",
         "jdtls",
         "solargraph",
-        "rubocop"
+        "rubocop",
+        "ruby_lsp"
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true -- not the same as ensure_installed
