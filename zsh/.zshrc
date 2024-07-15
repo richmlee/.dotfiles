@@ -30,8 +30,16 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # brew install zsh-history-substring-search
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+# brew install zsh-vi-mode
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # brew install fzf
 source <(fzf --zsh)
+# brew install zsh-completions
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+autoload -Uz compinit && compinit
+
+# tmuxp
+export TMUXP_CONFIGDIR=$HOME/.config/tmuxp
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
