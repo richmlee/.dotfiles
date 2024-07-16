@@ -12,7 +12,7 @@ blur = true
 startup_mode = "Maximized"
 
 [font]
-size = 13
+size = 14
 
 [font.offset]
 x = 0 
