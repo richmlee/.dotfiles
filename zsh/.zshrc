@@ -25,7 +25,9 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 export EDITOR='nvim'
 
-alias vi='nvim'
+alias vi="nvim"
+alias ls="ls --color=auto"
+alias diff="diff --color -y"
 
 # Plugins
 # brew install zsh-autosuggestions
