@@ -5,5 +5,8 @@ return {
   config = function()
     local telescope = require('telescope')
     telescope.load_extension('nerdy')
+    telescope.setup({
+      path_display = { "truncate" },
+    })
   end
 }
