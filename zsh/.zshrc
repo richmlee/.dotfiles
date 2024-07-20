@@ -1,4 +1,5 @@
 export PATH="/usr/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
@@ -47,6 +48,12 @@ export TMUXP_CONFIGDIR=$HOME/.config/tmuxp
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# measure shell load time
+# timezsh() {
+#   shell=${1-$SHELL}
+#   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+# }
 
 # Starship
 eval "$(starship init zsh)"

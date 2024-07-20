@@ -20,7 +20,8 @@ return {
         "solargraph",
         "rubocop",
         "ruby_lsp",
-        "taplo"
+        "taplo",
+        "hydra_lsp"
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true -- not the same as ensure_installed
