@@ -1,4 +1,3 @@
-export PATH="/usr/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
@@ -43,17 +42,15 @@ source <(fzf --zsh)
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit && compinit
 
+export SHELL=/opt/homebrew/bin/zsh
+
 # tmuxp
 export TMUXP_CONFIGDIR=$HOME/.config/tmuxp
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-# measure shell load time
-# timezsh() {
-#   shell=${1-$SHELL}
-#   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
-# }
-
 # Starship
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
+
