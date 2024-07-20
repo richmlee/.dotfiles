@@ -1,4 +1,3 @@
-# Disable the blank line at the start of the prompt
 add_newline = false
 
 command_timeout = 2350
@@ -14,4 +13,3 @@ $git_metrics\
 $git_status\
 $nodejs\
 $ruby"""
-
