@@ -3,7 +3,7 @@ program = "zsh"
 args = ["-l"]
 
 [window]
-decorations = "None"
+decorations = "Buttonless"
 opacity = 0.75
 blur = true
 startup_mode = "Maximized"
