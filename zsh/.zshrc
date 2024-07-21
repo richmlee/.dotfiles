@@ -42,8 +42,6 @@ source <(fzf --zsh)
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit && compinit
 
-export SHELL=/opt/homebrew/bin/zsh
-
 # tmuxp
 export TMUXP_CONFIGDIR=$HOME/.config/tmuxp
 
