@@ -11,8 +11,7 @@ return {
 			typescript = { "eslint_d" },
 			javascriptreact = { "eslint_d" },
 			ruby = { "rubocop" },
-			typescriptreadt = { "eslint_d" },
-			zsh = { "zsh" },
+			typescriptreact = { "eslint_d" },
 		}
 
 		-- TODO: revisit this section
