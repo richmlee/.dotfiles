@@ -4,7 +4,7 @@ local wo = vim.wo
 local g = vim.g
 
 -- General
-g.python3_host_prog = '~/.asdf/shims/python3'
+g.python3_host_prog = "~/.asdf/shims/python3"
 
 wo.number = true
 
