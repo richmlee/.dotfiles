@@ -1,11 +1,31 @@
+# exports
 export SHELL="/opt/homebrew/bin/zsh"
 export EDITOR="nvim"
 
-# should this be set before homebrew shellenv?
-# is `export` needed here?
-# should this be in .zshrc?
+# paths
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# plugins
+source <(fzf --zsh)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+export FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
+autoload -Uz compinit && compinit
+
+# aliases
+alias vi="nvim"
+alias ls="ls --color=auto"
+alias diff="diff --color -y"
+
+# tmuxp
+export TMUXP_CONFIGDIR="$HOME/.config/tmuxp"
+
+# starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
@@ -31,31 +51,3 @@ eval "$(starship init zsh)"
 # export ANDROID_HOME="$HOME/Library/Android/sdk"
 # export PATH="$PATH:$ANDROID_HOME/emulator"
 # export PATH="$PATH:$ANDROID_HOME/platform-tools"
-
-# aliases
-alias vi="nvim"
-alias ls="ls --color=auto"
-alias diff="diff --color -y"
-
-# plugins
-source <(fzf --zsh)
-
-# assume $(brew --prefix) has been exported by zprofile
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-export FPATH="$HOMEBREW_PREFIX/share/zsh-completions:$FPATH"
-autoload -Uz compinit && compinit
-
-# asdf
-# use `$HOMEBREW_PREFIX`?
-# should this be in .zprofile?
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-# tmuxp
-export TMUXP_CONFIGDIR="$HOME/.config/tmuxp"
-
-# starship
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init zsh)"
