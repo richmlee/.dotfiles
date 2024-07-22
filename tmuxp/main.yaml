@@ -1,5 +1,5 @@
 session_name: rich
-start_directory: "~/"
+start_directory: ~/
 windows:
   - window_name: home
     layout: even-horizontal
