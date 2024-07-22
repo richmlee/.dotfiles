@@ -12,6 +12,7 @@ source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring
 source $HOMEBREW_PREFIX/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 export FPATH="$HOMEBREW_PREFIX/share/zsh-completions:$FPATH"
+autoload -Uz compinit && compinit
 
 # asdf
 # use `$HOMEBREW_PREFIX`?
@@ -24,5 +25,3 @@ export TMUXP_CONFIGDIR="$HOME/.config/tmuxp"
 # starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
-
-autoload -Uz compinit && compinit
