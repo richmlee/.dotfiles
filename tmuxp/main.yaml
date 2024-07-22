@@ -1,11 +1,10 @@
 session_name: rich
-start_directory: ~/
 windows:
   - window_name: home
     layout: even-horizontal
     panes:
       - pane
-      - start_directory: notes
+      - start_directory: ~/notes
   - window_name: code
     panes:
-      - start_directory: code
+      - start_directory: ~/code
