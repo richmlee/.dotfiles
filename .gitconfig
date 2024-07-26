@@ -3,7 +3,14 @@
   email = rich@richmlee.com
 [color]
   ui = true
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
+[core]
+  fsmonitor = true
+  untrackedCache = true
+[fetch]
+  prune = true

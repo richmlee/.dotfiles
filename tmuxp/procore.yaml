@@ -1,0 +1,26 @@
+# TODO: use even-horizontal instead of main-horizontal and remove main-pane-heights
+# TODO: remove quotes
+# TODO: use relative path
+session_name: procore
+start_directory: ~/dev/procore/procore
+windows:
+  - window_name: home
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    panes:
+      - start_directory: ~/
+      - start_directory: ~/notes
+  - window_name: code
+    panes:
+      - pane
+  - window_name: test
+    panes:
+      - pane
+  - window_name: app
+    layout: main-horizontal
+    options:
+      main-pane-height: 50%
+    panes:
+      - pane
+      - start_directory: ~/dev/procore/procore/hydra_clients/modernized_change_events
