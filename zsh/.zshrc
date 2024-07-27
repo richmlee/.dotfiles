@@ -9,13 +9,13 @@ export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # plugins
+export FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
+autoload -Uz compinit && compinit
+
 source <(fzf --zsh)
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-export FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
-autoload -Uz compinit && compinit
 
 # aliases
 alias vi="nvim"
