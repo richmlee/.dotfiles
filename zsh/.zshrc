@@ -1,14 +1,13 @@
+# exports
 export EDITOR="nvim"
 
 # paths
-if [[ -z $TMUX ]]; then
-  export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-else
-  export SHELL="/opt/homebrew/bin/zsh"
-fi
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
 # asdf
+if [[ -z $TMUX ]]; then
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
 
 # plugins
 export FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
@@ -23,6 +22,8 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 alias vi="nvim"
 alias ls="ls --color=auto"
 alias diff="diff --color -y"
+
+# alias tmux='PATH="" '$(which tmux)
 
 # git
 #
