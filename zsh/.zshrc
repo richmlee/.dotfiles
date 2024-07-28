@@ -2,11 +2,12 @@
 export EDITOR="nvim"
 
 # paths
-export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-
-# asdf
+# don't rebuild these when using tmux 
 if [[ -z $TMUX ]]; then
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+  export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
+  # asdf
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
 fi
 
 # plugins
@@ -22,8 +23,6 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 alias vi="nvim"
 alias ls="ls --color=auto"
 alias diff="diff --color -y"
-
-# alias tmux='PATH="" '$(which tmux)
 
 # git
 #
