@@ -11,7 +11,7 @@
 #
 # https://gist.github.com/Linerre/f11ad4a6a934dcf01ee8415c9457e7b2
 #
-# This inspired the solution for my personal home and work setup:
+# This inspired the solution for my personal home and work setup: and it doesn't work.
 # does `export` matter?
 # ZDOTDIR="$HOME/.config/zsh"
 # echo 'start .zshprof 1'
