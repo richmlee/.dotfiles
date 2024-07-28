@@ -1,23 +1,15 @@
 session_name: procore
 start_directory: ~/dev/procore/procore
 windows:
-  - window_name: home
-    layout: main-vertical
-    options:
-      main-pane-width: 50%
-    panes:
-      - start_directory: ~/
-      - start_directory: ~/notes
   - window_name: code
     panes:
       - pane
   - window_name: test
     panes:
       - pane
-  - window_name: app
-    layout: main-horizontal
-    options:
-      main-pane-height: 50%
+  - window_name: server
     panes:
       - pane
+  - window_name: client
+    panes:
       - start_directory: ~/dev/procore/procore/hydra_clients/modernized_change_events

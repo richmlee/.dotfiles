@@ -1,24 +1,20 @@
-session_name: rich
-start_directory: "~"
+# avoid splits for now due to bugginess when panes are loaded
+# use more sessions
+session_name: main_fish
 global_options:
   default-shell: /opt/homebrew/bin/fish
   default-command: /opt/homebrew/bin/fish
 windows:
   - window_name: home
-    layout: even-horizontal
+    start_directory: ~/
+    panes:
+      - pane 
+  - window_name: notes
+    start_directory: ~/notes
     panes:
       - pane
-      - start_directory: ~/notes
   - window_name: code
-    panes:
-      - start_directory: ~/code
-  - window_name: l33thax0r
-    layout: tiled
-    panes:
-      - fastfetch
-    panes:
-      - btop
+    start_directory: ~/code
     panes:
       - pane
-    panes:
-      - pane
+
