@@ -16,13 +16,13 @@ return {
 				"tsserver",
 				"eslint",
 				"html",
+        "yamlls",
 				"jdtls",
 				"marksman",
 				"rubocop",
 				"ruby_lsp",
 				"solargraph",
 				"taplo",
-				"hydra_lsp",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed
