@@ -1,23 +1,36 @@
-session_name: rich
-start_directory: "~"
-global_options:
-  default-shell: /opt/homebrew/bin/fish
-  default-command: /opt/homebrew/bin/fish
+session_name: main
 windows:
   - window_name: home
     layout: even-horizontal
     panes:
       - pane
       - start_directory: ~/notes
-  - window_name: code
-    panes:
-      - start_directory: ~/code
-  - window_name: l33thax0r
-    panes:
-      - fastfetch
-    panes:
-      - btop
-    panes:
-      - pane
-    panes:
-      - pane
+
+
+
+
+
+# start_directory: ~/
+# windows:
+#   - window_name: home
+#     layout: even-horizontal
+#     panes:
+#       - focus: true
+#       - pane 
+#     focus: true
+
+  # - window_name: code
+  #   panes:
+  #     - shell_command:
+  #       - cd ~/code 
+  #     - focus: true
+  # - window_name: l33thax0r
+  #   layout: tiled
+  #   panes:
+  #     - shell_command:
+  #       - fastfetch
+  #       focus: true
+  #     - shell_command:
+  #       - btop
+  #     - pane
+  #     - pane
