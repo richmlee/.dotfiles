@@ -1,11 +1,10 @@
 session_name: main
 windows:
   - window_name: home
-    layout: even-horizontal
+    layout: main-vertical
     panes:
-      - pane
+      - focus: true
       - start_directory: ~/notes
-
 
 
 
