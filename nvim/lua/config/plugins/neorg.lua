@@ -7,6 +7,7 @@ return {
     neorg.setup({
       load = {
         ["core.defaults"] = {},
+        ["core.concealer"] = {},
       }
     })
   end,
