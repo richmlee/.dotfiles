@@ -40,9 +40,6 @@ return {
 			-- ["rust_analyzer"] = function ()
 			--   require("rust-tools").setup {}
 			-- end
-		})
-
-		-- local lspconfig = require('lspconfig')
-		-- lspconfig.setup()
-	end,
+    })
+  end
 }
