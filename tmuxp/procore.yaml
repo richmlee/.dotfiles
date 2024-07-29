@@ -1,6 +1,10 @@
 session_name: procore
 start_directory: ~/dev/procore/procore
 windows:
+  - window_name: notes
+    panes:
+      - shell_command:
+        - cd ~/notes/work && nvim ~/notes/work/index.norg
   - window_name: code
     panes:
       - pane
