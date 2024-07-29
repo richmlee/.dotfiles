@@ -24,5 +24,6 @@ local function show_diagnostics()
 		underline = true,
 	})
 end
+
 vim.keymap.set("n", "<leader>dh", hide_diagnostics)
 vim.keymap.set("n", "<leader>ds", show_diagnostics)

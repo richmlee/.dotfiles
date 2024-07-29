@@ -15,6 +15,7 @@ return {
 				"luadoc",
 				"markdown",
         "markdown_inline",
+        "norg",
 				"python",
 				"ruby",
 				"toml",
