@@ -1,11 +1,11 @@
 # avoid splits for now due to bugginess when panes are loaded
-# use more sessions
+# use more sessions - using shell connectors seems to work?
 session_name: main
+start_directory: ~/
 windows:
   - window_name: home
-    start_directory: ~/
     panes:
-      - pane 
+      - pane
   - window_name: notes
     start_directory: ~/notes
     panes:
@@ -14,4 +14,11 @@ windows:
     start_directory: ~/code
     panes:
       - pane
-
+  - window_name: l33thax0r
+    start_directory: ~/
+    layout: even-horizontal
+    panes:
+      - 
+        shell_command: clear; btop
+      - 
+        shell_command: clear; fastfetch

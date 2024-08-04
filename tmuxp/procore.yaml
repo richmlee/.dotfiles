@@ -2,18 +2,17 @@ session_name: procore
 start_directory: ~/dev/procore/procore
 windows:
   - window_name: notes
+    start_directory: ~/notes/work
     panes:
       - shell_command:
-        - cd ~/notes/work && nvim ~/notes/work/index.norg
-  - window_name: code
+        - clear; nvim index.norg
+  - window_name: develop
     panes:
       - pane
-  - window_name: test
+  - window_name: run
+    layout: even-vertical
     panes:
       - pane
-  - window_name: server
-    panes:
-      - pane
-  - window_name: client
-    panes:
-      - start_directory: ~/dev/procore/procore/hydra_clients/modernized_change_events
+      - shell_command:
+        - clear; cd hydra_clients/modernized_change_events
+

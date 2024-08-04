@@ -1,28 +1,39 @@
-# exports
-export EDITOR="nvim"
-
-# paths
-# don't rebuild these when using tmux 
-if [[ -z $TMUX ]]; then
-  export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-
-  # asdf
-  . /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
-
-# plugins
-export FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
-autoload -Uz compinit && compinit
-
-source <(fzf --zsh)
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# globals
+setopt vi
 
 # aliases
 alias vi="nvim"
 alias ls="ls --color=auto"
 alias diff="diff --color -y"
+alias font_family="fc-list : family" # mac only
+
+# exports
+if [[ -z $TMUX ]]; then
+  # don't rebuild these when using tmux 
+  export EDITOR="nvim"
+  export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
+  # asdf
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+  
+  # tmuxp
+  export TMUXP_CONFIGDIR="$HOME/.config/tmuxp"
+fi
+
+# plugins
+source <(fzf --zsh)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+export FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
+autoload -Uz compinit && compinit
+
+# starship
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+eval "$(starship init zsh)"
+
+# custom functions
 
 # git
 #
@@ -89,13 +100,6 @@ git_delete_local_branches_without_remotes () {
     echo 'NO'
   fi
 }
-
-# tmuxp
-export TMUXP_CONFIGDIR="$HOME/.config/tmuxp"
-
-# starship
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init zsh)"
 
 # TODO: cleanup and add as needed
 # export PATH="/opt/homebrew/opt/curl/bin:$PATH"
