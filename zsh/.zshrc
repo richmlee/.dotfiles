@@ -13,6 +13,9 @@ if [[ -z $TMUX ]]; then
   export EDITOR="nvim"
   export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
+  # set LS_COLORS on mac
+  eval $(env TERM=xterm256-color dircolors)
+
   # asdf
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
   
