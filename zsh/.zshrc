@@ -35,6 +35,54 @@ eval "$(starship init zsh)"
 
 # custom functions
 
+# github
+
+gh_pr_current_branch() {
+  "$git branch --show-current)"
+}
+
+gh_pr_stage() {
+  # may use locals to specify pr body template, title and base-branch
+  local current_branch=gh_pr_current_branch
+
+  echo $current_branch
+  
+  local pr_body_file=~/tmp/pr_bodies/$current_branch.md
+
+  if [ ! -f $pr_body_file ]; then
+    echo "local pr body file does not exist - creating..."
+
+    # variable location
+    cp ~/dev/procore/procore/.github/PULL_REQUEST_TEMPLATE/cmf.md $pr_body_file;
+
+    vi $pr_body_file;
+  else
+    echo "local pr body file already exists - edit ${pr_body_file} and then 'gh_pr_edit'"
+  fi
+}
+
+gh_pr_create() {
+  # from stdin
+  # - title
+  # - body file path
+  # - base branch
+
+  # automate where the copy of this file lives and set up for edit
+  # - maybe tmp folder using branch name as filename (see gh_pr_stage())
+
+  gh pr create --title "Test PR" --body-file ~/dev/procore/procore/.github/PULL_REQUEST_TEMPLATE/cmf.md --assignee @me
+}
+
+gh_pr_edit() {
+  # from stdin
+  # - title
+  # - body file path
+  # - base branch
+
+  gh pr edit --title "Test PR" --body-file ~/dev/procore/procore/.github/PULL_REQUEST_TEMPLATE/cmf.md
+}
+
+
 # git
 #
 # Only script read-only tasks for now, especially when using git's porcelain commands.  These are the high-level commands
