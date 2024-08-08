@@ -20,5 +20,3 @@ windows:
     panes:
       - 
         shell_command: clear; btop
-      - 
-        shell_command: clear; fastfetch
