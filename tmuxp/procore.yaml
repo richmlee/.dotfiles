@@ -1,6 +1,10 @@
 session_name: procore
 start_directory: ~/dev/procore/procore
 windows:
+  - window_name: script
+    panes:
+      - shell_command:
+        - clear; cd ~/
   - window_name: notes
     start_directory: ~/notes/work
     panes:
@@ -10,17 +14,14 @@ windows:
     panes:
       - shell_command:
         - clear; gh dash
-  - window_name: script
-    panes:
-      - shell_command:
-        - clear; cd ~/
-  - window_name: code
+  - window_name: develop
+    layout: main-horizontal
+    options:
+      main-pane-height: 75%
     panes:
       - shell_command:
         - clear; nvim
-  - window_name: test
-    panes:
-      -
+      - pane
   - window_name: run
     layout: even-vertical
     panes:
