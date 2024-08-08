@@ -33,7 +33,7 @@ style = "Bold Italic"
 style = "Italic"
 
 [font.normal]
-family = "MesloLGS Nerd Font Mono"
+family = "FiraCode Nerd Font Mono"
 style = "Regular"
 
 [colors]
